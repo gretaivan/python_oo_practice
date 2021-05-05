@@ -14,8 +14,11 @@ class CLI():
 
     def get_input(self): 
         try: 
+            if self._user_input == 'exit':
+                return self.goodbye()
+            
             self._user_input = input(f'\n{Format.BLUE}What is your GitHub username?{Format.CLEAR}\n')
-            #print(self._user_input)
+           
         except ValueError: 
             print(f'{Format.RED}Wrong input')
             self.get_input()
@@ -24,7 +27,10 @@ class CLI():
         for i, repo in enumerate(Repo.all):
             repo = Repo.find_by_id(i)
             print(f'Repo {i} - {repo.info}')
-        #repo = Repo.find_by_id()
+
+    @staticmethod
+    def goodbye():
+        print(f'\n{Format.BLUE}{Format.BOLD}Goodbye....{Format.CLEAR}\n')
         
 
 if __name__ == '__main__':
