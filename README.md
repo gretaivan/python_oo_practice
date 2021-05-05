@@ -9,3 +9,7 @@ CLI with an Object Oriented design
 - [x] display all repos to the user
 - [x] where description none change the text to custom string
 - [x] format the console printout
+- [ ] repo test
+    - [x] name test
+    - [ ] description test
+    - [ ] language test

@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
+pytest = "*"
 
 [dev-packages]
 
@@ -13,3 +14,4 @@ python_version = "3.10"
 
 [scripts]
 start = "python main.py"
+test = "pytest ."
